@@ -12,12 +12,12 @@ app.use(express.json());
 
 const db = mysql.createConnection(
     {
-      host: 'lcpbq9az4jklobvq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+      host: 'j21q532mu148i8ms.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
       // MySQL username,
-      user: 's1n0rnzx5fmj8g48',
+      user: 'bintnoni1x3wcgic',
       // MySQL password
-      password: 'u0q10xt2hj626nbv',
-      database: 'ty74t9hgaqyh0y9c'
+      password: 'ad2qw8tbgf472p6d',
+      database: 'fltrh47f9miodpcc'
     },
     console.log(`Connected to the courses_db database.`)
 );
