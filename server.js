@@ -94,9 +94,10 @@ function questions() {
                         ]) .then((data) => {
                             departments.push(`${data.dname}`);
                             db.query(`INSERT INTO department (name) VALUES('${data.dname}')`, function (err, table) {
-                            console.table(table)
                             });
-                            console.log('test')
+                            db.query('SELECT name FROM department', function (err, table) {
+                                console.table(table);
+                            });
                             
                         })
                     break;
@@ -134,10 +135,11 @@ function questions() {
                         }
                         
                         db.query(`INSERT INTO role (title, salary, department_id) VALUES('${data.rname}',${data.pay}, ${choice})`, function (err, table) {
+                        
+                        }) 
                         db.query(`SELECT title, salary FROM role`, function (err, data) {
                             console.table(data);
                         })
-                       }) 
                     })
                     break;
                 case 'add an employee':
